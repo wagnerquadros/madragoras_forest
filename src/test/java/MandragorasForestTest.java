@@ -62,4 +62,36 @@ public class MandragorasForestTest {
         Assertions.assertEquals(55523551406028L, result);
     }
 
+    @Test
+    public void testCase5(){
+        H.add(5);
+        H.add(2);
+        H.add(6);
+        H.add(11);
+        H.add(29);
+        H.add(12);
+        H.add(7);
+
+        long result = mf.mmandragora(H);
+        Assertions.assertEquals(260, result);
+    }
+
+    @Test
+    public void testCase6(){
+        String path = "src/test/java/entries/testCase6.txt";
+        H = er.getEntries(path);
+
+        long result = mf.mmandragora(H);
+        Assertions.assertEquals(9760016801005104L, result);
+    }
+
+    @Test
+    public void testCase7(){
+        String path = "src/test/java/entries/testCase7.txt";
+        H = er.getEntries(path);
+
+        long result = mf.mmandragora(H);
+        Assertions.assertEquals(17892186985803078L, result);
+    }
+
 }

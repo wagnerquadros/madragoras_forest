@@ -26,7 +26,7 @@ public class MandragorasForest {
      * gera maior experiência.
      *
      * @param H
-     * @return
+     * @return bestScore
      */
     public long mmandragora(List<Integer> H) {
 

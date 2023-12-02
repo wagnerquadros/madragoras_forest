@@ -7,10 +7,7 @@ public class Main {
 
         MandragorasForest m = new MandragorasForest();
         List<Integer> l = new ArrayList<>();
-
-;
         l.add(15);
-
         System.out.println(m.mmandragora(l));
     }
 
