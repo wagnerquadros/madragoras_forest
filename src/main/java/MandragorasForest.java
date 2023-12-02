@@ -3,7 +3,7 @@ import java.util.List;
 public class MandragorasForest {
 
     /**
-     * Metododo para clacular o maximo de pontos de experiencia
+     * Metododo para calcular o maximo de pontos de experiencia
      * dada uma lista de mandragoras H. A estratégia foi prdenar a lista
      * de mandragoras em ordem crescente, e iniciar a verificação considerando
      * que foram comidas todas as mandragoras menos a última com maior saúde.
