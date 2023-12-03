@@ -91,6 +91,32 @@ são lidos de arquivos txt. A classe responsável pela leitura das entradas é a
 
 ![Result](images/testes.png)
 
+### Tempo de execução
+
+Foram implementados testes para verificação do tempo de execução do método ***MandragorasForestTest***
+para diferentes tamanhos de entradas, iniciando em ***n = 1** até ***n = 100.000***.
+
+| Entradas | Tempo médio (nanosegundos) |
+|----------|---------------------------:|
+| 01       |                     573480 |
+| 25       |                      10575 |
+| 50       |                      58275 |
+| 75       |                     139250 |
+| 100      |                      43249 |
+| 1.000    |                     464225 |
+| 5.000    |                    7697524 |
+| 10.000   |                    5067100 |
+| 25.000   |                   13457350 |
+| 50.000   |                   25938175 |
+| 75.000   |                   30850400 |
+| 100.000  |                   56454300 |
+
+O primeiro gráfico mosta a evolução do tempo de execução para entradas
+de 01 á 100. O segundo mostra o tempo para 1.000 entradas até 100.000.
+
+![Grafico](images/graficoUm.png)
+
+
 ## Submit Result
 
 ![Submit Result](images/Results.png)
