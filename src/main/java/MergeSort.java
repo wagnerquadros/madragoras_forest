@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Classe de ordenação MergeSort. Ordena uma lista de inteiro de forma decrescente.
+ * Classe de ordenação MergeSort. Ordena uma lista de inteiros em ordem decrescente.
  */
 public class MergeSort {
 

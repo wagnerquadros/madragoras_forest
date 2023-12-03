@@ -4,6 +4,13 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Classe de testes.
+ * Os testes testCase1, testCase2,testCase3 testCase4,testCase5, testCase6 e testCase7
+ * têm com base casos propostos pelo portal HakerRank para validação do método implementado.
+ * Os demais casos de testes medem o tempo de execução do método mandragoraDynamicPrograming()
+ * para diferentes tamanhos de entradas.
+ */
 public class MandragorasForestTest {
 
     MandragorasForest mf = new MandragorasForest();
@@ -16,9 +23,6 @@ public class MandragorasForestTest {
         H.add(3);
         H.add(2);
         H.add(2);
-
-        //long result = mf.mandragora(H);
-        //Assertions.assertEquals(10, result);
 
         Long dynamicResult = mf.mandragoraDynamicPrograming(H);
         Assertions.assertEquals(10, dynamicResult);
@@ -43,9 +47,6 @@ public class MandragorasForestTest {
         H.add(9153873);
         H.add(9345902);
 
-        //long result = mf.mandragora(H);
-        //Assertions.assertEquals(472813835, result);
-
         Long dynamicResult = mf.mandragoraDynamicPrograming(H);
         Assertions.assertEquals(472813835, dynamicResult);
     }
@@ -55,9 +56,6 @@ public class MandragorasForestTest {
         String path = "src/test/java/inputs/testCase3.txt";
         H = er.getInputs(path);
 
-        long result = mf.mandragora(H);
-        Assertions.assertEquals(116928304010376L, result);
-
         Long dynamicResult = mf.mandragoraDynamicPrograming(H);
         Assertions.assertEquals(116928304010376L, dynamicResult);
     }
@@ -66,9 +64,6 @@ public class MandragorasForestTest {
     public void testCase4(){
         String path = "src/test/java/inputs/testCase4.txt";
         H = er.getInputs(path);
-
-        //long result = mf.mandragora(H);
-        //Assertions.assertEquals(55523551406028L, result);
 
         Long dynamicResult = mf.mandragoraDynamicPrograming(H);
         Assertions.assertEquals(55523551406028L, dynamicResult);
@@ -84,9 +79,6 @@ public class MandragorasForestTest {
         H.add(12);
         H.add(7);
 
-        //long result = mf.mandragora(H);
-        //Assertions.assertEquals(260, result);
-
         Long dynamicResult = mf.mandragoraDynamicPrograming(H);
         Assertions.assertEquals(260, dynamicResult);
     }
@@ -96,9 +88,6 @@ public class MandragorasForestTest {
         String path = "src/test/java/inputs/testCase6.txt";
         H = er.getInputs(path);
 
-        //long result = mf.mandragora(H);
-        //Assertions.assertEquals(9760016801005104L, result);
-
         Long dynamicResult = mf.mandragoraDynamicPrograming(H);
         Assertions.assertEquals(9760016801005104L, dynamicResult);
     }
@@ -107,9 +96,6 @@ public class MandragorasForestTest {
     public void testCase7(){
         String path = "src/test/java/inputs/testCase7.txt";
         H = er.getInputs(path);
-
-        //long result = mf.mandragora(H);
-        //Assertions.assertEquals(17892186985803078L, result);
 
         Long dynamicResult = mf.mandragoraDynamicPrograming(H);
         Assertions.assertEquals(17892186985803078L, dynamicResult);
@@ -124,7 +110,7 @@ public class MandragorasForestTest {
     public void testCase8_1Input(){
         H = inputs.generateInputs(1);
         long startTime = System.nanoTime();
-        Long dynamicResult = mf.mandragoraDynamicPrograming(H);
+        mf.mandragoraDynamicPrograming(H);
         long endTime = System.nanoTime();
 
         System.out.println("Tempo de execução (01): " + (endTime - startTime) + " nanoSegundos");
@@ -135,7 +121,7 @@ public class MandragorasForestTest {
         H = inputs.generateInputs(100);
 
         long startTime = System.nanoTime();
-        Long dynamicResult = mf.mandragoraDynamicPrograming(H);
+        mf.mandragoraDynamicPrograming(H);
         long endTime = System.nanoTime();
 
         System.out.println("Tempo de execução (100): " + (endTime - startTime) + " nanoSegundos");
@@ -146,7 +132,7 @@ public class MandragorasForestTest {
         H = inputs.generateInputs(1000);
 
         long startTime = System.nanoTime();
-        Long dynamicResult = mf.mandragoraDynamicPrograming(H);
+        mf.mandragoraDynamicPrograming(H);
         long endTime = System.nanoTime();
 
         System.out.println("Tempo de execução (1.000): " + (endTime - startTime) + " nanoSegundos");
@@ -157,7 +143,7 @@ public class MandragorasForestTest {
         H = inputs.generateInputs(5000);
 
         long startTime = System.nanoTime();
-        Long dynamicResult = mf.mandragoraDynamicPrograming(H);
+        mf.mandragoraDynamicPrograming(H);
         long endTime = System.nanoTime();
 
         System.out.println("Tempo de execução (5.000): " + (endTime - startTime) + " nanoSegundos");
@@ -168,7 +154,7 @@ public class MandragorasForestTest {
         H = inputs.generateInputs(10000);
 
         long startTime = System.nanoTime();
-        Long dynamicResult = mf.mandragoraDynamicPrograming(H);
+        mf.mandragoraDynamicPrograming(H);
         long endTime = System.nanoTime();
 
         System.out.println("Tempo de execução (10.000): " + (endTime - startTime) + " nanoSegundos");
@@ -179,7 +165,7 @@ public class MandragorasForestTest {
         H = inputs.generateInputs(25000);
 
         long startTime = System.nanoTime();
-        Long dynamicResult = mf.mandragoraDynamicPrograming(H);
+        mf.mandragoraDynamicPrograming(H);
         long endTime = System.nanoTime();
 
         System.out.println("Tempo de execução (25.000): " + (endTime - startTime) + " nanoSegundos");
@@ -190,7 +176,7 @@ public class MandragorasForestTest {
         H = inputs.generateInputs(50000);
 
         long startTime = System.nanoTime();
-        Long dynamicResult = mf.mandragoraDynamicPrograming(H);
+        mf.mandragoraDynamicPrograming(H);
         long endTime = System.nanoTime();
 
         System.out.println("Tempo de execução (50.000): " + (endTime - startTime) + " nanoSegundos");
@@ -201,7 +187,7 @@ public class MandragorasForestTest {
         H = inputs.generateInputs(75000);
 
         long startTime = System.nanoTime();
-        Long dynamicResult = mf.mandragoraDynamicPrograming(H);
+        mf.mandragoraDynamicPrograming(H);
         long endTime = System.nanoTime();
 
         System.out.println("Tempo de execução (75.000): " + (endTime - startTime) + " nanoSegundos");
@@ -212,7 +198,7 @@ public class MandragorasForestTest {
         H = inputs.generateInputs(100000);
 
         long startTime = System.nanoTime();
-        Long dynamicResult = mf.mandragoraDynamicPrograming(H);
+        mf.mandragoraDynamicPrograming(H);
         long endTime = System.nanoTime();
 
         System.out.println("Tempo de execução (100.000): " + (endTime - startTime) + " nanoSegundos");
@@ -222,7 +208,7 @@ public class MandragorasForestTest {
     public void testCase17_25Input(){
         H = inputs.generateInputs(25);
         long startTime = System.nanoTime();
-        Long dynamicResult = mf.mandragoraDynamicPrograming(H);
+        mf.mandragoraDynamicPrograming(H);
         long endTime = System.nanoTime();
 
         System.out.println("Tempo de execução (25): " + (endTime - startTime) + " nanoSegundos");
@@ -232,7 +218,7 @@ public class MandragorasForestTest {
     public void testCase18_50Input(){
         H = inputs.generateInputs(50);
         long startTime = System.nanoTime();
-        Long dynamicResult = mf.mandragoraDynamicPrograming(H);
+        mf.mandragoraDynamicPrograming(H);
         long endTime = System.nanoTime();
 
         System.out.println("Tempo de execução (50): " + (endTime - startTime) + " nanoSegundos");
@@ -242,7 +228,7 @@ public class MandragorasForestTest {
     public void testCase19_75Input(){
         H = inputs.generateInputs(75);
         long startTime = System.nanoTime();
-        Long dynamicResult = mf.mandragoraDynamicPrograming(H);
+        mf.mandragoraDynamicPrograming(H);
         long endTime = System.nanoTime();
 
         System.out.println("Tempo de execução (75): " + (endTime - startTime) + " nanoSegundos");

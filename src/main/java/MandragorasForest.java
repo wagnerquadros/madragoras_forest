@@ -26,7 +26,11 @@ public class MandragorasForest {
      *
      * @param H
      * @return bestScore
+     *
+     * @deprecated Este método foi decontinuado.
+     *             Use mandragoraDynamicPrograming() em vez desse.
      */
+    @Deprecated
     public long mandragora(List<Integer> H) {
 
         //Status iniciais: saúde = 1 e experiência = 0
