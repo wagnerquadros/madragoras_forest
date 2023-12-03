@@ -70,6 +70,7 @@ public class MandragorasForest {
         Long p = null;
         Long expPoints = 0L;
         int health = 1;
+        int mandragorasHealthSum = 0;
 
         List<Long> previousResults = new ArrayList<>();
 
@@ -82,14 +83,18 @@ public class MandragorasForest {
         }
 
         for (int i = 0; i < H.size() - eatenMandragoras; i++) {
-            expPoints += (long) H.get(i) * (eatenMandragoras + health);
+            mandragorasHealthSum += H.get(i);
+            expPoints += mandragorasHealthSum * (eatenMandragoras + health);
             previousResults.add(expPoints);
+            expPoints = 0L;
             eatenMandragoras--;
 
-            if(i != 0)
-                if (previousResults.get(i) < previousResults.get(i - 1))
-                    p = previousResults.get(i-1);
-
+            if(i != 0) {
+                if (previousResults.get(i) < previousResults.get(i - 1)) {
+                    p = previousResults.get(i - 1);
+                    break;
+                }
+            }
         }
         return p;
     }
