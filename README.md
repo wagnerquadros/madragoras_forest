@@ -1,4 +1,4 @@
-# Madragoras Forest HackerHank Problem
+# Madragoras Forest HackerRank Problem
 
 ---
 O espaço de trabalho contém duas pastas por padrão, onde:
@@ -12,6 +12,7 @@ O espaço de trabalho contém duas pastas por padrão, onde:
 
 
 - `Como executar`: executar a classe MandragorasForestTest. A classe executa um série de testes de validação do método implementado. 
+
 
 ## Sobre o Exercício
 
