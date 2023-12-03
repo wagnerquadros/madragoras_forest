@@ -18,6 +18,9 @@ public class MandragorasForestTest {
 
         long result = mf.mandragora(H);
         Assertions.assertEquals(10, result);
+
+        Long dynamicResult = mf.mandragoraDynemicPrograming(H);
+        Assertions.assertEquals(10, dynamicResult);
     }
 
     @Test
@@ -39,9 +42,11 @@ public class MandragorasForestTest {
         H.add(9153873);
         H.add(9345902);
 
-
         long result = mf.mandragora(H);
         Assertions.assertEquals(472813835, result);
+
+        Long dynamicResult = mf.mandragoraDynemicPrograming(H);
+        Assertions.assertEquals(472813835, dynamicResult);
     }
 
     @Test
@@ -51,6 +56,9 @@ public class MandragorasForestTest {
 
         long result = mf.mandragora(H);
         Assertions.assertEquals(116928304010376L, result);
+
+        Long dynamicResult = mf.mandragoraDynemicPrograming(H);
+        Assertions.assertEquals(116928304010376L, dynamicResult);
     }
 
     @Test
@@ -60,6 +68,9 @@ public class MandragorasForestTest {
 
         long result = mf.mandragora(H);
         Assertions.assertEquals(55523551406028L, result);
+
+        Long dynamicResult = mf.mandragoraDynemicPrograming(H);
+        Assertions.assertEquals(55523551406028L, dynamicResult);
     }
 
     @Test
@@ -74,6 +85,9 @@ public class MandragorasForestTest {
 
         long result = mf.mandragora(H);
         Assertions.assertEquals(260, result);
+
+        Long dynamicResult = mf.mandragoraDynemicPrograming(H);
+        Assertions.assertEquals(260, dynamicResult);
     }
 
     @Test
@@ -83,6 +97,9 @@ public class MandragorasForestTest {
 
         long result = mf.mandragora(H);
         Assertions.assertEquals(9760016801005104L, result);
+
+        Long dynamicResult = mf.mandragoraDynemicPrograming(H);
+        Assertions.assertEquals(9760016801005104L, dynamicResult);
     }
 
     @Test
@@ -92,6 +109,9 @@ public class MandragorasForestTest {
 
         long result = mf.mandragora(H);
         Assertions.assertEquals(17892186985803078L, result);
+
+        Long dynamicResult = mf.mandragoraDynemicPrograming(H);
+        Assertions.assertEquals(17892186985803078L, dynamicResult);
     }
 
 }
