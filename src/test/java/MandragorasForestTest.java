@@ -16,7 +16,7 @@ public class MandragorasForestTest {
         H.add(2);
         H.add(2);
 
-        long result = mf.mmandragora(H);
+        long result = mf.mandragora(H);
         Assertions.assertEquals(10, result);
     }
 
@@ -40,7 +40,7 @@ public class MandragorasForestTest {
         H.add(9345902);
 
 
-        long result = mf.mmandragora(H);
+        long result = mf.mandragora(H);
         Assertions.assertEquals(472813835, result);
     }
 
@@ -49,7 +49,7 @@ public class MandragorasForestTest {
         String path = "src/test/java/entries/testCase3.txt";
         H = er.getEntries(path);
 
-        long result = mf.mmandragora(H);
+        long result = mf.mandragora(H);
         Assertions.assertEquals(116928304010376L, result);
     }
 
@@ -58,7 +58,7 @@ public class MandragorasForestTest {
         String path = "src/test/java/entries/testCase4.txt";
         H = er.getEntries(path);
 
-        long result = mf.mmandragora(H);
+        long result = mf.mandragora(H);
         Assertions.assertEquals(55523551406028L, result);
     }
 
@@ -72,7 +72,7 @@ public class MandragorasForestTest {
         H.add(12);
         H.add(7);
 
-        long result = mf.mmandragora(H);
+        long result = mf.mandragora(H);
         Assertions.assertEquals(260, result);
     }
 
@@ -81,7 +81,7 @@ public class MandragorasForestTest {
         String path = "src/test/java/entries/testCase6.txt";
         H = er.getEntries(path);
 
-        long result = mf.mmandragora(H);
+        long result = mf.mandragora(H);
         Assertions.assertEquals(9760016801005104L, result);
     }
 
@@ -90,7 +90,7 @@ public class MandragorasForestTest {
         String path = "src/test/java/entries/testCase7.txt";
         H = er.getEntries(path);
 
-        long result = mf.mmandragora(H);
+        long result = mf.mandragora(H);
         Assertions.assertEquals(17892186985803078L, result);
     }
 
