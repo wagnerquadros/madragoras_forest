@@ -65,12 +65,12 @@ public class MandragorasForest {
         return bestScore;
     }
 
-    public Long mandragoraDynemicPrograming(List<Integer> H) {
+    public Long mandragoraDynamicPrograming(List<Integer> H) {
 
         Long p = null;
         Long expPoints = 0L;
         int health = 1;
-        int mandragorasHealthSum = 0;
+        Long mandragorasHealthSum = 0L;
 
         List<Long> previousResults = new ArrayList<>();
 
@@ -83,8 +83,8 @@ public class MandragorasForest {
         }
 
         for (int i = 0; i < H.size() - eatenMandragoras; i++) {
-            mandragorasHealthSum += H.get(i);
-            expPoints += mandragorasHealthSum * (eatenMandragoras + health);
+            mandragorasHealthSum += (long) H.get(i);
+            expPoints += (long) mandragorasHealthSum * (eatenMandragoras + health);
             previousResults.add(expPoints);
             expPoints = 0L;
             eatenMandragoras--;

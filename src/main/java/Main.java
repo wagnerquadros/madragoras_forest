@@ -8,12 +8,12 @@ public class Main {
         MandragorasForest m = new MandragorasForest();
         List<Integer> l = new ArrayList<>();
         l.add(1);
-        l.add(5);
+        l.add(8);
         l.add(90);
         l.add(2);
         l.add(45);
 
-        System.out.println(m.mandragoraDynemicPrograming(l));
+        System.out.println(m.mandragoraDynamicPrograming(l));
     }
 
 }
