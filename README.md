@@ -37,43 +37,38 @@ em 2 * (3 + 5) = 16 pontos de experiência
 ## Método implementado
 
 ```
-    public long mmandragora(List<Integer> H) {
+    public Long mandragoraDynamicPrograming(List<Integer> H) {
 
-        //Status iniciais: saúde = 1 e experiência = 0
-        Long expPonits = 0L;
+        Long p = null;
+        Long expPoints = 0L;
         int health = 1;
+        Long mandragorasHealthSum = 0L;
 
-        H.sort(null);
+        List<Long> previousResults = new ArrayList<>();
 
-        //Mandragoras comidas durante a jornada
         int eatenMandragoras = H.size() - 1;
-        Long bestScore = 0L;
 
-        boolean found = false;
+        H.sort(Comparator.reverseOrder());
 
-        while (!found) {
-            health += eatenMandragoras;
+        if (H.size() == 1) {
+            return Long.valueOf(H.get(0));
+        }
 
-            if(H.size() == 1) {
-                return H.get(0);
-            }
+        for (int i = 0; i < H.size() - eatenMandragoras; i++) {
+            mandragorasHealthSum += (long) H.get(i);
+            expPoints += (long) mandragorasHealthSum * (eatenMandragoras + health);
+            previousResults.add(expPoints);
+            expPoints = 0L;
+            eatenMandragoras--;
 
-            for (int i = H.size(); i > eatenMandragoras; i--) {
-                expPonits += (long) H.get(i-1) * health;
-            }
-
-            if(expPonits > bestScore){
-                bestScore = expPonits;
-                //Reiniciando os Statuss para nova verificação
-                expPonits = 0L;
-                health = 1;
-                eatenMandragoras--;
-            } else {
-                found = true;
+            if(i != 0) {
+                if (previousResults.get(i) < previousResults.get(i - 1)) {
+                    p = previousResults.get(i - 1);
+                    break;
+                }
             }
         }
-        return bestScore;
+        return p;
     }
-
 ```
 
