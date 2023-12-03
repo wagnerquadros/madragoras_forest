@@ -91,7 +91,7 @@ encerra o *loop*, economizando tempo computacional.
         return p;
     }
 ```
-## Testes Realizado
+## Testes Realizados
 
 Foi implementada a classe de testes *MandragorasForestTest* contendo 7 casos de testes propostos
 pelo portal HackerHank. Os testes variam em números de entradas. Para entradas maiores, os valores
