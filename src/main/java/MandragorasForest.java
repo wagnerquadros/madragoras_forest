@@ -83,7 +83,9 @@ public class MandragorasForest {
 
         int eatenMandragoras = H.size() - 1;
 
-        H.sort(Comparator.reverseOrder());
+        MergeSort mergeSort = new MergeSort();
+        mergeSort.decreasingMergeSort(H);
+        //H.sort(Comparator.reverseOrder());
 
         if (H.size() == 1) {
             return Long.valueOf(H.get(0));
