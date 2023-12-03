@@ -3,7 +3,7 @@
 O espaço de trabalho contém duas pastas por padrão, onde:
 
 - `src`: a pasta origem com classe main e pacotes do ChiefHooper e Test
-- `scr/main/java`: pacote com classes Main e MandragorasForest
+- `scr/main/java`: pacote com classes Main, MandragorasForest e MargeSort
 - `scr/test/java`: pacote de testes com as classes EntriesReader e MandragorasForestTest
 - `scr/test/java/entries`: pacote com arquivos .txt contendo as entradas para os testes
 
@@ -22,8 +22,8 @@ dado um conjunto de mandrágoras com diferentes níveis de saúde.
 
 ### Restrições
 
-Número de mandragoras (n) -> **1 <= n <= 100000**
-Saúde das Mandragoras H[i] -> **1 <= H[i] <= 10000000, 1<= i <= n onde**
+- Número de mandragoras (n) -> **1 <= n <= 100000**
+- Saúde das Mandragoras H[i] -> **1 <= H[i] <= 10000000, 1<= i <= n onde**
 
 ### Exemplo prático
 Se a lista de saúde das mandrágoras for H = [3, 2, 5], Garnet tem duas escolhas para cada mandrágora. 
@@ -39,20 +39,20 @@ em 2 * (3 + 5) = 16 pontos de experiência
 O método usa a técnica de programação dinâmica para otimizar o cálculo dos pontos de experiência, armazenando
 resultados anteriores e verificando se continuar o cálculo é vamtajoso em termos de pontuação de experiência.
 
-1. **Variáveis Iniciais**: O método começa inicializando variáveis como *expPoints* para acumular os pontos de experiência, 
-*mandragorasHealthSum* para acumular a soma da saúde das mandrágoras, e *previousResults* para armazenar os resultados anteriores.
+1. **Variáveis Iniciais**: O método começa inicializando variáveis como ***expPoints*** para acumular os pontos de experiência, 
+***mandragorasHealthSum*** para acumular a soma da saúde das mandrágoras, e ***previousResults*** para armazenar os resultados anteriores.
 
 2. **Ordenação**: As mandrágoras são ordenadas em ordem decrescente.
 
 3. **Caso Base**: Se houver apenas uma mandrágora, o valor dela é retornado imediatamente.
 
-4. **Loop Principal**: O método entra em um *loop* que percorre as mandrágoras. Para cada mandrágora, acumula a saúde, 
+4. **Loop Principal**: O método entra em um ***loop*** que percorre as mandrágoras. Para cada mandrágora, acumula a saúde, 
 calcula os pontos de experiência, e armazena os resultados anteriores.
 
-5. **Otimização**: Uma verificação é feita para determinar se o resultado atual é menor que o anterior. Se sim, atualiza *p* e 
-encerra o *loop*, economizando tempo computacional.
+5. **Otimização**: Uma verificação é feita para determinar se o resultado atual é menor que o anterior. Se sim, atualiza ***p*** e 
+encerra o ***loop***, economizando tempo computacional.
 
-6. **Resultado Final**: O método retorna o valor de *p*, que representa a melhor pontuação de experiência obtida com a abordagem dinâmica.
+6. **Resultado Final**: O método retorna o valor de ***p***, que representa a melhor pontuação de experiência obtida com a abordagem dinâmica.
 
 ## Método implementado
 
@@ -68,7 +68,8 @@ encerra o *loop*, economizando tempo computacional.
 
         int eatenMandragoras = H.size() - 1;
 
-        H.sort(Comparator.reverseOrder());
+        MergeSort mergeSort = new MergeSort();
+        mergeSort.decreasingMergeSort(H);
 
         if (H.size() == 1) {
             return Long.valueOf(H.get(0));
@@ -91,11 +92,35 @@ encerra o *loop*, economizando tempo computacional.
         return p;
     }
 ```
+
+## Análise assintótica
+
+### 1 Criação e listas e variáveis
+A criação de variáveis e listas é uma operação de tempo constante, portanto, é ***O(1)***.
+
+### 2 Ordenação com MergeSort decrescente
+Para a ordenação decrescente do Array ***H*** foi utilizado o método ***decreasingMergeSort*** que
+implementa o algoritmo **Mergesort** para ordenação decrescente. A complexidade de tempo do Mergesort 
+é ***O(n log n)***, onde ***n*** é o tamanho da lista ***H***.
+
+### 3 Loop principal
+
+O *loop* percorre a lista ***H*** uma vez. Sendo assim, a complexidade de tempo do *loop* é
+***O(n)***, onde ***n*** é o tamanho da lista ***H***. As demais operações realizadas dentro do
+*loop* são executadas em tempo constante, com complexidade ***O(1)***. No pior caso, o *loop* percorre
+a lista ***H*** ***n*** vezes.
+
+### Complexidade do método ***mandragoraDynamicPrograming***
+
+A ordenação com o MergeSort domina a complexidade do método. O restante das operações são realizados em
+tempo constante ou são proporcionais ao tamanho da lista. Portante a complexidade do mátodo é ***O(n log n).
+
+
 ## Testes Realizados
 
-Foi implementada a classe de testes *MandragorasForestTest* contendo 7 casos de testes propostos
+Foi implementada a classe de testes ***MandragorasForestTest*** contendo 7 casos de testes propostos
 pelo portal HackerHank. Os testes variam em números de entradas. Para entradas maiores, os valores
-são lidos de arquivos txt. A classe responsável pela leitura das entradas é a *EntriesReader*.
+são lidos de arquivos txt. A classe responsável pela leitura das entradas é a ***EntriesReader***.
 
 ### Resultados
 
