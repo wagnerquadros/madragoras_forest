@@ -5,8 +5,7 @@ O espaço de trabalho contém duas pastas por padrão, onde:
 - `src`: a pasta origem com classe main e pacotes do ChiefHooper e Test
 - `scr/main/java`: pacote com classes Main e MandragorasForest
 - `scr/test/java`: pacote de testes com as classes EntriesReader e MandragorasForestTest
-- `scr/test/java/entrie`: pacote com arquivos .txt contendo as entradas para os testes
-
+- `scr/test/java/entries`: pacote com arquivos .txt contendo as entradas para os testes
 
 ## Sobre o Exercício
 Este exercício descreve uma jornada através de uma floresta perigosa, onde Garnet e seu animal de estimação 
@@ -20,6 +19,11 @@ A cada encontro com uma mandrágora, Garnet tem duas opções:
 
 O objetivo é determinar o número máximo de pontos de experiência que Garnet pode coletar em sua jornada, 
 dado um conjunto de mandrágoras com diferentes níveis de saúde.
+
+### Restrições
+
+Número de mandragoras (n) -> **1 <= n <= 100000**
+Saúde das Mandragoras H[i] -> **1 <= H[i] <= 10000000, 1<= i <= n onde**
 
 ### Exemplo prático
 Se a lista de saúde das mandrágoras for H = [3, 2, 5], Garnet tem duas escolhas para cada mandrágora. 
@@ -87,7 +91,16 @@ encerra o *loop*, economizando tempo computacional.
         return p;
     }
 ```
+## Testes Realizado
+
+Foi implementada a classe de testes *MandragorasForestTest* contendo 7 casos de testes propostos
+pelo portal HackerHank. Os testes variam em números de entradas. Para entradas maiores, os valores
+são lidos de arquivos txt. A classe responsável pela leitura das entradas é a *EntriesReader*.
+
+### Resultados
+
+![Result](src/images/testes.png)
 
 ## Submit Result
 
-![Submit Rsult](src/images/Results.png)
+![Submit Result](src/images/Results.png)
