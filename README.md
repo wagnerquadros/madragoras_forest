@@ -31,8 +31,8 @@ dado um conjunto de mandrágoras com diferentes níveis de saúde.
 
 ### Restrições
 
-- Número de mandragoras (n) -> **1 <= n <= 100000**
-- Saúde das Mandragoras H[i] -> **1 <= H[i] <= 10000000, 1<= i <= n onde**
+- Número de mandragoras (n): **1 <= n <= 100000**
+- Saúde das Mandragoras H[i]: **1 <= H[i] <= 10000000, 1<= i <= n onde**
 
 ### Exemplo prático
 Se a lista de saúde das mandrágoras for **H = [3, 2, 5]**, Garnet tem duas escolhas para cada mandrágora. 
