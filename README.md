@@ -1,16 +1,17 @@
 # Madragoras Forest HackerRank Problem
 
-O espaço de trabalho contém duas pastas por padrão, onde:
+## Estrutura do Projeto
 
-- `scr/main/java`: pacote com classes Main, MandragorasForest e MargeSort
+#### O eprojeto contém as seguintes pastas:
+
+- `scr/main/java`: pacote com classes Main, MandragorasForest, InputGenerator e MargeSort
 - `scr/test/java`: pacote de testes com as classes InputsReader e MandragorasForestTest
 - `scr/test/java/inputs`: pacote com arquivos .txt contendo as entradas para os testes
 
+#### Configurações:
 
 - `maven/dependencies`: JUnit 5.10.1
-
-
-- `Como executar`: executar a classe MandragorasForestTest. A classe executa um série de testes de validação do método implementado. 
+- `Como executar`: executar a classe MandragorasForestTest. A classe executa uma série de testes de validação do método implementado. 
 
 
 ## Sobre o Exercício
@@ -29,8 +30,8 @@ dado um conjunto de mandrágoras com diferentes níveis de saúde.
 
 ### Restrições
 
-- Número de mandragoras (n): **1 <= n <= 100000**
-- Saúde das Mandragoras H[i]: **1 <= H[i] <= 10000000, 1<= i <= n onde**
+- Número de mandrágoras (n): **1 <= n <= 100000**
+- Saúde das mandrágoras H[i]: **1 <= H[i] <= 10000000, 1<= i <= n onde**
 
 ### Exemplo prático
 Se a lista de saúde das mandrágoras for **H = [3, 2, 5]**, Garnet tem duas escolhas para cada mandrágora. 
@@ -44,7 +45,7 @@ em **2 * (3 + 5) = 16** pontos de experiência
 ## Resolvendo o Exercício 
 
 O método usa a técnica de programação dinâmica para otimizar o cálculo dos pontos de experiência, armazenando
-resultados anteriores e verificando se continuar o cálculo é vamtajoso em termos de pontuação de experiência.
+resultados anteriores e verificando se continuar o cálculo é vantajoso em termos de pontuação de experiência.
 
 1. **Variáveis Iniciais**: O método começa inicializando variáveis como ***expPoints*** para acumular os pontos de experiência, 
 ***mandragorasHealthSum*** para acumular a soma da saúde das mandrágoras, e ***previousResults*** para armazenar os resultados anteriores.
@@ -59,7 +60,7 @@ calcula os pontos de experiência, e armazena os resultados anteriores.
 5. **Otimização**: Uma verificação é feita para determinar se o resultado atual é menor que o anterior. Se sim, atualiza ***p*** e 
 encerra o ***loop***, economizando tempo computacional.
 
-6. **Resultado Final**: O método retorna o valor de ***p***, que representa a melhor pontuação de experiência obtida com a abordagem dinâmica.
+6. **Resultado**: O método retorna o valor de ***p***, que representa a melhor pontuação de experiência obtida com a abordagem dinâmica.
 
 ## Método implementado
 
@@ -68,11 +69,11 @@ uma série de mandrágoras durante a jornada. Ele utiliza a técnica de programa
 evitando recálculos desnecessários e armazenando resultados intermediários.
 
 ### 1 Inicialização das variáveis:
-* ***p***: Variável que armazenará o resultado final da pontuação de experiência.
+* ***p***: Variável que armazenará o resultado da pontuação de experiência.
 * ***expPoints***: Variável para armazenar temporariamente a pontuação de experiência durante o cálculo.
 * ***health***: Representa a saúde inicial da personagem.
 * ***mandragorasHealthSum***: Armazena a soma acumulada das saúdes das mandrágoras.
-* ***previousResults***: Lista que armazenará os resultados intermediários para evitar recalculos.
+* ***previousResults***: Lista que armazenará os resultados intermediários para evitar recálculos.
 * ***eatenMandragoras***: Representa a quantidade de mandrágoras comidas durante a jornada.
 
 ### 2 Ordenação Decrescente das Mandrágoras:
@@ -92,10 +93,10 @@ saúde dessa mandrágora como pontuação de experiência.
 
 ### 5 Verificação de Otimização (Evitar Recálculos Desnecessários):
 * Verifica se a pontuação de experiência atual é menor que a pontuação armazenada no passo anterior. Se for, 
-isso indica que continuar o cálculo não resultará em uma pontuação maior, e o método interrompe a execução, 
+isso indica que continuar o cálculo não resultará numa pontuação maior, e o método interrompe a execução, 
 retornando a pontuação armazenada.
 
-### 6 Retorno do Resultado Final:
+### 6 Retorno do Resultado:
 * Retorna a pontuação final armazenada em **_p_**.
 
 ---
@@ -113,7 +114,7 @@ total.
 A criação de variáveis e listas é uma operação de tempo constante, portanto, é ***O(1)***.
 
 ### 2 Ordenação com MergeSort decrescente:
-Para a ordenação decrescente do Array ***H*** foi utilizado o método ***decreasingMergeSort*** que
+Para a ordenação decrescente da lista ***H*** foi utilizado o método ***decreasingMergeSort*** que
 implementa o algoritmo **Mergesort** para ordenação decrescente. A complexidade de tempo do Mergesort 
 é ***O(n log n)***, onde ***n*** é o tamanho da lista ***H***.
 
@@ -124,8 +125,8 @@ O *loop* percorre a lista ***H*** uma vez. Sendo assim, a complexidade de tempo 
 a lista ***H*** ***n*** vezes.
 
 ### Complexidade do método ***mandragoraDynamicPrograming***:
-A ordenação com o MergeSort domina a complexidade do método. O restante das operações são realizados em
-tempo constante ou são proporcionais ao tamanho da lista. Portante a complexidade do mátodo é ***O(n log n)***.
+A ordenação com o MergeSort domina a complexidade do método. O restante das operações são realizadas em
+tempo constante ou são proporcionais ao tamanho da lista. Portanto, a complexidade do mátodo é ***O(n log n)***.
 
 
 ## Testes Realizados
@@ -141,8 +142,8 @@ são lidos de arquivos txt. A classe responsável pela leitura das entradas é a
 ### Tempo de execução:
 
 Foram implementados testes para verificação do tempo de execução do método ***MandragorasForestTest***
-para diferentes tamanhos de entradas, iniciando em ***n = 1** até ***n = 100.000***. Os testes foram execuatados
-em duas máquina diferentes:
+para diferentes tamanhos de entradas, iniciando em ***n = 1*** até ***n = 100.000***. Os testes foram executados
+em duas máquinas diferentes:
 * **Máquina Um**: Intel Core i7 8700K 3.7 GHz / 32 GBytes RAM DDR4 3.200 MHz
 * **Máquina Dois**: Intel Core i5 9300H 2.4 GHz / 8 GBytes RAM DDR4 2.600 MHz
 
@@ -183,7 +184,7 @@ A submissão do método para calcular o máximo de pontos de experiência possí
 ref.1: CORMEN, Thoma; LEISERSON, Charles; RIVEST, Ronald; STEIN, Clifford. Algorítimos: Teoria e Prática. Rio de
 Janeiro: GEN | Grupo Editorial Nacional. Publicado pelo selo LTC | Livros Técnicos e Científicos Editora Ltda, 2022.
 
-ref.2: JUNIT.ORG. Junit 5 User Guide. Diponível em: <https://junit.org/junit5/docs/current/user-guide/>.
+ref.2: JUNIT.ORG. Junit 5 User Guide. Disponível em: <https://junit.org/junit5/docs/current/user-guide/>.
 Acesso em: 02 dez. 2023.
 
 ref.3: HACKERRANK. Mandragora Prblem. Disponível em: <https://www.hackerrank.com/challenges/mandragora/problem>. Acesso em: 01 dez. 2023.
