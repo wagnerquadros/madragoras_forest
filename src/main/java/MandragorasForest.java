@@ -5,7 +5,7 @@ import java.util.List;
 public class MandragorasForest {
 
     /**
-     * Metododo para calcular o maximo de pontos de experiencia
+     * Métododo para calcular o máximo de pontos de experiância
      * dada uma lista de mandragoras H. A estratégia foi prdenar a lista
      * de mandragoras em ordem crescente, e iniciar a verificação considerando
      * que foram comidas todas as mandragoras menos a última com maior saúde.
@@ -65,6 +65,13 @@ public class MandragorasForest {
         return bestScore;
     }
 
+    /**
+     * O método usa a técnica de programação dinâmica para otimizar o cálculo dos pontos de experiência,
+     * armazenando resultados anteriores e verificando se continuar o cálculo é vantajoso em termos de
+     * pontuação de experiência.
+     * @param H
+     * @return p
+     */
     public Long mandragoraDynamicPrograming(List<Integer> H) {
 
         Long p = null;
@@ -72,7 +79,7 @@ public class MandragorasForest {
         int health = 1;
         Long mandragorasHealthSum = 0L;
 
-        List<Long> previousResults = new ArrayList<>();
+        List<Long> previousResults = new ArrayList<>(); //Lista para armazenar resutaldos anteriores e evitar recalculos.
 
         int eatenMandragoras = H.size() - 1;
 
@@ -89,6 +96,8 @@ public class MandragorasForest {
             expPoints = 0L;
             eatenMandragoras--;
 
+            //Verifica se a experiência atual é menor que a experiência armazenada no passo anterior.
+            //A partir daí já o ganho de experiência diminui.
             if(i != 0) {
                 if (previousResults.get(i) < previousResults.get(i - 1)) {
                     p = previousResults.get(i - 1);

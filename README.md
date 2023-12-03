@@ -32,7 +32,23 @@ em 2 * (3 + 5) = 16 pontos de experiência
 
 ## Resolvendo o Exercício 
 
+O método usa a técnica de programação dinâmica para otimizar o cálculo dos pontos de experiência, armazenando
+resultados anteriores e verificando se continuar o cálculo é vamtajoso em termos de pontuação de experiência.
 
+1. **Variáveis Iniciais**: O método começa inicializando variáveis como *expPoints* para acumular os pontos de experiência, 
+*mandragorasHealthSum* para acumular a soma da saúde das mandrágoras, e *previousResults* para armazenar os resultados anteriores.
+
+2. **Ordenação**: As mandrágoras são ordenadas em ordem decrescente.
+
+3. **Caso Base**: Se houver apenas uma mandrágora, o valor dela é retornado imediatamente.
+
+4. **Loop Principal**: O método entra em um *loop* que percorre as mandrágoras. Para cada mandrágora, acumula a saúde, 
+calcula os pontos de experiência, e armazena os resultados anteriores.
+
+5. **Otimização**: Uma verificação é feita para determinar se o resultado atual é menor que o anterior. Se sim, atualiza *p* e 
+encerra o *loop*, economizando tempo computacional.
+
+6. **Resultado Final**: O método retorna o valor de *p*, que representa a melhor pontuação de experiência obtida com a abordagem dinâmica.
 
 ## Método implementado
 
