@@ -1,6 +1,5 @@
 # Madragoras Forest HackerRank Problem
 
----
 O espaço de trabalho contém duas pastas por padrão, onde:
 
 - `scr/main/java`: pacote com classes Main, MandragorasForest e MargeSort
@@ -16,7 +15,6 @@ O espaço de trabalho contém duas pastas por padrão, onde:
 
 ## Sobre o Exercício
 
----
 Este exercício descreve uma jornada através de uma floresta perigosa, onde Garnet e seu animal de estimação 
 encontram mandrágoras. Cada mandrágora tem um certo nível de saúde, representado por uma lista H. Garnet 
 começa com 1 ponto de saúde (s) e 0 pontos de experiência (p).
@@ -45,7 +43,6 @@ em **2 * (3 + 5) = 16** pontos de experiência
 
 ## Resolvendo o Exercício 
 
----
 O método usa a técnica de programação dinâmica para otimizar o cálculo dos pontos de experiência, armazenando
 resultados anteriores e verificando se continuar o cálculo é vamtajoso em termos de pontuação de experiência.
 
@@ -66,7 +63,6 @@ encerra o ***loop***, economizando tempo computacional.
 
 ## Método implementado
 
----
 O método ***mandragoraDynamicPrograming*** é projetado para calcular a pontuação máxima de experiência ao enfrentar 
 uma série de mandrágoras durante a jornada. Ele utiliza a técnica de programação dinâmica para otimizar o cálculo, 
 evitando recálculos desnecessários e armazenando resultados intermediários.
@@ -113,7 +109,6 @@ total.
 
 ## Análise assintótica
 
----
 ### 1 Criação e listas e variáveis:
 A criação de variáveis e listas é uma operação de tempo constante, portanto, é ***O(1)***.
 
@@ -135,7 +130,6 @@ tempo constante ou são proporcionais ao tamanho da lista. Portante a complexida
 
 ## Testes Realizados
 
----
 Foi implementada a classe de testes ***MandragorasForestTest*** contendo 7 casos de testes propostos
 pelo portal HackerHank. Os testes variam em números de entradas. Para entradas maiores, os valores
 são lidos de arquivos txt. A classe responsável pela leitura das entradas é a ***InputsReader***.
@@ -182,9 +176,10 @@ A submissão do método para calcular o máximo de pontos de experiência possí
 
 ![Submit Result](images/Results.png)
 
+---
 ## Referências
 
----
+
 ref.1: CORMEN, Thoma; LEISERSON, Charles; RIVEST, Ronald; STEIN, Clifford. Algorítimos: Teoria e Prática. Rio de
 Janeiro: GEN | Grupo Editorial Nacional. Publicado pelo selo LTC | Livros Técnicos e Científicos Editora Ltda, 2022.
 
