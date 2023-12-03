@@ -9,14 +9,14 @@ import java.io.IOException;
  * dos Testes.
  */
 
-public class EntriesReader {
+public class InputsReader {
     /**
      * Recebe o caminho do arquivo .txt contendo as alturas dos edifícios e
      * retorna um ArrayList de edificios e suas respectivas alturas.
      * @param path
      * @return H
      */
-    public List<Integer> getEntries(String path){
+    public List<Integer> getInputs(String path){
         List<Integer> H = new ArrayList<>();
 
         try(BufferedReader br = new BufferedReader(new java.io.FileReader(path))){

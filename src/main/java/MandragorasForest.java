@@ -85,7 +85,6 @@ public class MandragorasForest {
 
         MergeSort mergeSort = new MergeSort();
         mergeSort.decreasingMergeSort(H);
-        //H.sort(Comparator.reverseOrder());
 
         if (H.size() == 1) {
             return Long.valueOf(H.get(0));

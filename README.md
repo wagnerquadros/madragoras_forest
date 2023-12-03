@@ -4,8 +4,8 @@ O espaço de trabalho contém duas pastas por padrão, onde:
 
 - `src`: a pasta origem com classe main e pacotes do ChiefHooper e Test
 - `scr/main/java`: pacote com classes Main, MandragorasForest e MargeSort
-- `scr/test/java`: pacote de testes com as classes EntriesReader e MandragorasForestTest
-- `scr/test/java/entries`: pacote com arquivos .txt contendo as entradas para os testes
+- `scr/test/java`: pacote de testes com as classes InputsReader e MandragorasForestTest
+- `scr/test/java/inputs`: pacote com arquivos .txt contendo as entradas para os testes
 
 ## Sobre o Exercício
 Este exercício descreve uma jornada através de uma floresta perigosa, onde Garnet e seu animal de estimação 
@@ -56,42 +56,7 @@ encerra o ***loop***, economizando tempo computacional.
 
 ## Método implementado
 
-```
-    public Long mandragoraDynamicPrograming(List<Integer> H) {
-
-        Long p = null;
-        Long expPoints = 0L;
-        int health = 1;
-        Long mandragorasHealthSum = 0L;
-
-        List<Long> previousResults = new ArrayList<>();
-
-        int eatenMandragoras = H.size() - 1;
-
-        MergeSort mergeSort = new MergeSort();
-        mergeSort.decreasingMergeSort(H);
-
-        if (H.size() == 1) {
-            return Long.valueOf(H.get(0));
-        }
-
-        for (int i = 0; i < H.size() - eatenMandragoras; i++) {
-            mandragorasHealthSum += (long) H.get(i);
-            expPoints += (long) mandragorasHealthSum * (eatenMandragoras + health);
-            previousResults.add(expPoints);
-            expPoints = 0L;
-            eatenMandragoras--;
-
-            if(i != 0) {
-                if (previousResults.get(i) < previousResults.get(i - 1)) {
-                    p = previousResults.get(i - 1);
-                    break;
-                }
-            }
-        }
-        return p;
-    }
-```
+![mandragoraDynamicPrograming](images/code.png)
 
 ## Análise assintótica
 
@@ -113,19 +78,19 @@ a lista ***H*** ***n*** vezes.
 ### Complexidade do método ***mandragoraDynamicPrograming***
 
 A ordenação com o MergeSort domina a complexidade do método. O restante das operações são realizados em
-tempo constante ou são proporcionais ao tamanho da lista. Portante a complexidade do mátodo é ***O(n log n).
+tempo constante ou são proporcionais ao tamanho da lista. Portante a complexidade do mátodo é ***O(n log n)***.
 
 
 ## Testes Realizados
 
 Foi implementada a classe de testes ***MandragorasForestTest*** contendo 7 casos de testes propostos
 pelo portal HackerHank. Os testes variam em números de entradas. Para entradas maiores, os valores
-são lidos de arquivos txt. A classe responsável pela leitura das entradas é a ***EntriesReader***.
+são lidos de arquivos txt. A classe responsável pela leitura das entradas é a ***InputsReader***.
 
 ### Resultados
 
-![Result](src/images/testes.png)
+![Result](images/testes.png)
 
 ## Submit Result
 
-![Submit Result](src/images/Results.png)
+![Submit Result](images/Results.png)
