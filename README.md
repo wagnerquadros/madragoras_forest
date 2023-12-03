@@ -2,7 +2,7 @@
 
 ## Estrutura do Projeto
 
-#### O eprojeto contém as seguintes pastas:
+#### O projeto contém as seguintes pastas:
 
 - `scr/main/java`: pacote com classes Main, MandragorasForest, InputGenerator e MargeSort
 - `scr/test/java`: pacote de testes com as classes InputsReader e MandragorasForestTest
